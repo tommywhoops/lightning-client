@@ -19,3 +19,5 @@ testem.log
 .env.deploy.development
 .env.deploy.production
 .env
+
+dump.rdb
