@@ -5,7 +5,8 @@ module.exports = function(environment) {
     modulePrefix: 'lightning-client',
     environment: environment,
     baseURL: '/',
-    locationType: 'auto',
+    apiHost: 'http://localhost:3000',
+    locationType: 'hash',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
