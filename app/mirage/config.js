@@ -79,23 +79,24 @@ export default function() {
 }
 
 export function testConfig() {
-  this.get('/things', function() {
-    return {
-      data: [
-        {
-          id: 1,
-          type: 'thing',
-          attributes: {
-            title: 'Test Thing Record',
-            'created-at': '2016-03-15T18:29:33.166Z',
-            'updated-at': '2016-03-15T18:29:33.166Z'
-          },
-          links: {
-            self: '/things/1'
-          }
-        }
-     ]
-    };
-  });
+  this.passthrough('/things');
+  // this.get('/things', function() {
+  //   return {
+  //     data: [
+  //       {
+  //         id: 1,
+  //         type: 'thing',
+  //         attributes: {
+  //           title: 'Test Thing Record',
+  //           'created-at': '2016-03-15T18:29:33.166Z',
+  //           'updated-at': '2016-03-15T18:29:33.166Z'
+  //         },
+  //         links: {
+  //           self: '/things/1'
+  //         }
+  //       }
+  //    ]
+  //   };
+  // });
 }
 

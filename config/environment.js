@@ -17,7 +17,21 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+    'ember-cli-mirage': {
+      enabled: false
     }
+  };
+
+  ENV.contentSecurityPolicy = {
+    'default-src': "'none'",
+    'script-src': "'self'",
+    'frame-src': "'self'",
+    'font-src': "'self'",
+    'connect-src': "'self' http://localhost:3000",
+    'img-src': "'self'",
+    'style-src': "'self' 'unsafe-inline'",
+    'media-src': "'self'"
   };
 
   if (environment === 'development') {
@@ -32,12 +46,16 @@ module.exports = function(environment) {
     // Testem prefers this...
     ENV.baseURL = '/';
     ENV.locationType = 'none';
-
+    ENV.apiHost = 'http://localhost:3000',
     // keep test console output quieter
     ENV.APP.LOG_ACTIVE_GENERATION = false;
     ENV.APP.LOG_VIEW_LOOKUPS = false;
 
     ENV.APP.rootElement = '#ember-testing';
+
+    ENV['ember-cli-mirage'] = {
+      enabled: false
+    };
   }
 
   if (environment === 'production') {
