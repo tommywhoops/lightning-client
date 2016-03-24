@@ -21,3 +21,4 @@ testem.log
 .env
 
 dump.rdb
+.DS_Store
